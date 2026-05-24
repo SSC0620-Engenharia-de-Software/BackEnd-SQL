@@ -14,7 +14,7 @@ Repositório responsável por:
 project-root/
 │
 ├── docker/
-│   └── docker.yaml
+│   └── docker-compose.yaml
 │
 ├── Modelagem/
 │
@@ -31,7 +31,7 @@ project-root/
 
 Contém a configuração Docker utilizada para inicializar e executar o container PostgreSQL.
 
-### docker.yaml
+### docker-compose.yaml
 
 Responsável por:
 - criar o container PostgreSQL
@@ -76,7 +76,7 @@ Responsável por:
 Arquivo:
 
 ```text
-docker/docker.yaml
+docker/docker-compose.yaml
 ```
 
 Configuração atual:
@@ -135,7 +135,7 @@ Dentro da pasta `docker/`:
 ## Iniciar container
 
 ```bash
-docker compose -f docker.yaml up -d
+docker compose up -d
 ```
 
 ---
@@ -143,7 +143,7 @@ docker compose -f docker.yaml up -d
 ## Parar container
 
 ```bash
-docker compose -f docker.yaml down
+docker compose down
 ```
 
 ---
@@ -151,8 +151,8 @@ docker compose -f docker.yaml down
 ## Recriar completamente o banco
 
 ```bash
-docker compose -f docker.yaml down -v
-docker compose -f docker.yaml up -d
+docker compose down -v
+docker compose up -d
 ```
 
 O parâmetro `-v` remove o volume persistente do PostgreSQL e força a execução novamente dos scripts SQL.
@@ -187,6 +187,6 @@ Se o banco já existir, o PostgreSQL NÃO executará novamente os scripts automa
 Para forçar a reinicialização:
 
 ```bash
-docker compose -f docker.yaml down -v
-docker compose -f docker.yaml up -d
+docker compose down -v
+docker compose up -d
 ```
