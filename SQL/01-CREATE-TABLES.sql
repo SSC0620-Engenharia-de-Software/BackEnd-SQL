@@ -11,13 +11,11 @@ create table if not exists EMPRESA_TESTE (
 	constraint FK_Tipo_Empresa foreign key(tipo) references tipos_empresa_teste(tipo)
 );
 
-create table if not exists RESERVAS_MES (
+create table if not exists RESERVAS_TESTE (
 	nomeEmpresa varchar(30),
-	mes varchar(3),
+	data DATE,
 	nroReservas int not null,
-	constraint PK_Reservas_Mes primary key (nomeEmpresa, mes),
-	constraint FK_Reservas_Mes_Nome_Empresa foreign key(nomeEmpresa) references EMPRESA_TESTE(nome),
-	constraint CK_Reservas_Mes_Mes_Real check(mes in ('JAN', 'FEV', 'MAR', 'ABR', 'MAI', 'JUN', 'JUL',
-														'AGO', 'SET', 'OUT', 'NOV', 'DEZ')),
-	constraint CK_Nro_Reservas_Positivo check(nroReservas > 0)
+	constraint PK_Reservas_Data primary key (nomeEmpresa, data),
+	constraint FK_Reservas_Nome_Empresa foreign key(nomeEmpresa) references EMPRESA_TESTE(nome),
+	constraint CK_Reservas_Nro_Reservas_Positivo check(nroReservas > 0)
 )
