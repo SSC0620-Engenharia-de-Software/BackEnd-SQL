@@ -173,7 +173,7 @@ Ordem de execução:
 
 ```text
 01-CREATE-TABLES.sql
-02-INSERTS-TESTE.sql
+02-INSERTS.sql
 ```
 
 ---
