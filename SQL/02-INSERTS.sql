@@ -322,13 +322,13 @@ INSERT INTO EMPRESA_ESTRUTURA (
 );
 
 INSERT INTO PESSOA_VISITANTE (idpessoa, senha) 
-VALUES ('111222333', 'testesenha');
+VALUES ('111222333', 'Testesenha1#');
 
 INSERT INTO PESSOA_ADMIN (idpessoa, senha) 
-VALUES ('444555666', 'testesenha');
+VALUES ('444555666', 'Testesenha1#');
 
 INSERT INTO PESSOA_FUNCIONARIO (idpessoa, senha) 
-VALUES ('777888999', 'testesenha');
+VALUES ('777888999', 'Testesenha1#');
 
 INSERT INTO PESSOA_EMPRESARIO (idpessoa, senha, idempresa) VALUES
-('53208583000107', 'testesenha', 1);
+('53208583000107', 'Testesenha1#', 1);
